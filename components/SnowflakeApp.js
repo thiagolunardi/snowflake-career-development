@@ -141,11 +141,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       focusedTrackId={this.state.focusedTrackId}
       setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
       
-      <MTrackSelector
-      milestoneByTrack={this.state.milestoneByTrack}
-      focusedTrackId={this.state.focusedTrackId}
-      setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
-      
       <div style={{display: 'flex'}}>
       <div style={{flex: 3}}>
       
@@ -181,7 +176,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       <div className="footer" style={{display: 'flex', paddingBottom: '3px'}}>
       <div style={{flex: 1}}>
       Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-      Changes and adaptation by <a href="https://deliveryhero.com" target="_blank">Delivery Hero</a>. 
+      Changes and adaptation by <a href="https://paymenttools.com" target="_blank">Paymenttools</a>. 
       </div>
       </div>
       <br></br>

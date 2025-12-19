@@ -1,51 +1,36 @@
 // @flow
 import * as d3 from 'd3'
-import EXECUTION from './trackData/execution.json'
-import EXECUTION_MANAGEMENT from './trackData/executionManagerTrack.json'
-import LEADERSHIP from './trackData/leadership.json'
-import LEADERSHIP_MANAGEMENT from './trackData/leadershipManagerTrack.json'
-import PERSONAL_EXCELLENCE from './trackData/personalExcellence.json'
-import PERSONAL_MANAGEMENT from './trackData/personalManagerTrack.json'
-import TECHNICAL_EXCELLENCE from './trackData/technicalExcellence.json'
-import TECHNICAL_MANAGEMENT from './trackData/technicalManagerTrack.json'
+import TECHNOLOGY from './trackData/technology.json'
+import SYSTEM from './trackData/system.json'
+import PEOPLE from './trackData/people.json'
+import PROCESS from './trackData/process.json'
+import INFLUENCE from './trackData/influence.json'
 
-export type TrackId = 'TECHNICAL_MANAGEMENT' | 'EXECUTION_MANAGEMENT' | 'LEADERSHIP_MANAGEMENT' | 'PERSONAL_MANAGEMENT'
-|'EXECUTION' | 'LEADERSHIP' | 'PERSONAL_EXCELLENCE' | 'TECHNICAL_EXCELLENCE'
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
+export type TrackId = 'TECHNOLOGY' | 'SYSTEM' | 'PEOPLE' | 'PROCESS' | 'INFLUENCE'
+export type Milestone = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 
 export type MilestoneMap = {
-  'EXECUTION': Milestone,
-  'EXECUTION_MANAGEMENT': Milestone,
-  'LEADERSHIP': Milestone,
-  'PERSONAL_EXCELLENCE': Milestone,
-  'TECHNICAL_EXCELLENCE': Milestone,
-  'TECHNICAL_MANAGEMENT' : Milestone, 
-  'EXECUTION_MANAGEMENT' : Milestone, 
-  'LEADERSHIP_MANAGEMENT' : Milestone, 
-  'PERSONAL_MANAGEMENT': Milestone,
+  'TECHNOLOGY': Milestone,
+  'SYSTEM': Milestone,
+  'PEOPLE': Milestone,
+  'PROCESS': Milestone,
+  'INFLUENCE': Milestone,
 }
-export const milestones = [0, 1, 2, 3, 4, 5, 6]
+export const milestones = [0, 1, 2, 3, 4, 5, 6, 7]
 
 export const iCTitles = [
-  {label: 'Software Engineer - IC1', minPoints: 0, maxPoints: 12},
-  {label: 'Software Engineer - IC2', minPoints: 12, maxPoints: 25},
-  {label: 'Software Engineer - IC3', minPoints: 22, maxPoints: 45},
-  {label: 'Software Engineer - IC4', minPoints: 40, maxPoints: 80},
-  {label: 'Software Engineer - IC5', minPoints: 70, maxPoints: 140},
-  {label: 'Software Engineer - IC6', minPoints: 120}
+  {label: 'Software Engineer - IC1', minPoints: 0, maxPoints: 60},
+  {label: 'Software Engineer - IC2', minPoints: 60, maxPoints: 120},
+  {label: 'Software Engineer - IC3', minPoints: 120, maxPoints: 180},
+  {label: 'Software Engineer - IC4', minPoints: 180, maxPoints: 240},
+  {label: 'Software Engineer - IC5', minPoints: 240, maxPoints: 300},
+  {label: 'Software Engineer - IC6', minPoints: 300, maxPoints: 340},
+  {label: 'Software Engineer - IC7', minPoints: 340}
 ]
 
-export const mTitles = [
-  {label: 'Engineering Manager - M1',  minPoints: 15, maxPoints: 36},
-  {label: 'Senior Engineering Manager - M2',  minPoints: 24, maxPoints: 80},
-  {label: 'Director of Engineering - M3',  minPoints: 55, maxPoints: 140},
-  {label: 'Senior Director of Engineering - M4',  minPoints: 120, maxPoints: 220},
-  {label: 'VP of Engineering - M5',  minPoints: 200}
-]
+export const titles = iCTitles
 
-export const titles = iCTitles.concat(mTitles);
-
-export const maxLevel = 192
+export const maxLevel = 350
 
 export type Track = {
   displayName: string,
@@ -59,21 +44,11 @@ export type Track = {
 }
   
   export const tracks: Tracks = {
-    TECHNICAL_EXCELLENCE, TECHNICAL_MANAGEMENT, EXECUTION, EXECUTION_MANAGEMENT, 
-    LEADERSHIP, LEADERSHIP_MANAGEMENT, PERSONAL_EXCELLENCE, PERSONAL_MANAGEMENT
-  };
-  
-  export const mTracks: Tracks = {
-    TECHNICAL_MANAGEMENT, EXECUTION_MANAGEMENT,LEADERSHIP_MANAGEMENT, PERSONAL_MANAGEMENT
-  };
-
-  export const iCTracks: Tracks = {
-    TECHNICAL_EXCELLENCE, EXECUTION,LEADERSHIP, PERSONAL_EXCELLENCE
+    TECHNOLOGY, SYSTEM, PEOPLE, PROCESS, INFLUENCE
   };
   
   export const trackIds: TrackId[] = Object.keys(tracks)
-  export const MtrackIds: MTrackId[] = Object.keys(mTracks)
-  export const ICtrackIds: ICTrackId[] = Object.keys(iCTracks)
+  export const ICtrackIds: ICTrackId[] = Object.keys(tracks)
   
   export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
     set.add(tracks[trackId].category)
@@ -122,20 +97,9 @@ export type Track = {
   
   
   export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
-    const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
-    var titleICList = iCTitles.filter(title => (title.minPoints === undefined || totalPoints.IC >= title.minPoints)
-    && (title.maxPoints === undefined || totalPoints.IC <= title.maxPoints))
-    .map(title => title.label)
-    
-    var titleMList = mTitles.filter(title => (title.minPoints === undefined || totalPoints.M >= title.minPoints)
-    && (title.maxPoints === undefined || totalPoints.M <= title.maxPoints))
-    .map(title => title.label)
-
-    //You can only be a Manager if you are an IC3 at least
-    if (totalPoints.IC < iCTitles[2].minPoints)
-    {
-      return titleICList;
-    }
-    
-    return titleICList.concat(titleMList);
+      const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
+      return iCTitles
+        .filter(title => (title.minPoints === undefined || totalPoints.IC >= title.minPoints)
+          && (title.maxPoints === undefined || totalPoints.IC <= title.maxPoints))
+        .map(title => title.label)
   }

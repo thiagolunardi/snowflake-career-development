@@ -4,16 +4,13 @@ export const emptyState = (): SnowflakeAppState => {
         name: '',
         title: '',
         milestoneByTrack: {
-            'LEADERSHIP': 0,
-            'EXECUTION': 0,
-            'PERSONAL_EXCELLENCE': 0,
-            'TECHNICAL_EXCELLENCE': 0,
-            'TECHNICAL_MANAGEMENT' : 0, 
-            'EXECUTION_MANAGEMENT' : 0, 
-            'LEADERSHIP_MANAGEMENT' : 0, 
-            'PERSONAL_MANAGEMENT': 0
+            'TECHNOLOGY': 0,
+            'SYSTEM': 0,
+            'PEOPLE': 0,
+            'PROCESS': 0,
+            'INFLUENCE': 0
         },
-        focusedTrackId: 'TECHNICAL_EXCELLENCE'
+        focusedTrackId: 'TECHNOLOGY'
     }
 };
 
@@ -22,15 +19,12 @@ export const defaultState = (): SnowflakeAppState => {
         name: '',
         title: 'Software Engineer - IC1',
         milestoneByTrack: {
-            'LEADERSHIP': 0,
-            'EXECUTION': 0,
-            'PERSONAL_EXCELLENCE': 0,
-            'TECHNICAL_EXCELLENCE': 0,
-            'TECHNICAL_MANAGEMENT' : 0, 
-            'EXECUTION_MANAGEMENT' : 0, 
-            'LEADERSHIP_MANAGEMENT' : 0, 
-            'PERSONAL_MANAGEMENT': 0
+            'TECHNOLOGY': 0,
+            'SYSTEM': 0,
+            'PEOPLE': 0,
+            'PROCESS': 0,
+            'INFLUENCE': 0
         },
-        focusedTrackId: 'TECHNICAL_EXCELLENCE'
+        focusedTrackId: 'TECHNOLOGY'
     }
 };
