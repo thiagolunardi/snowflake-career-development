@@ -18,17 +18,23 @@ export type MilestoneMap = {
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
-export const iCTitles = [
-  {label: 'Software Engineer - L1', minPoints: 0, maxPoints: 60},
-  {label: 'Software Engineer - L2', minPoints: 60, maxPoints: 90},
-  {label: 'Software Engineer - L3', minPoints: 80, maxPoints: 110},
-  {label: 'Senior Software Engineer - L4', minPoints: 100, maxPoints: 130},
-  {label: 'Senior Software Engineer - L5', minPoints: 140, maxPoints: 180},
-  {label: 'Staff / Architect - L6', minPoints: 180, maxPoints: 210},
-  {label: 'Principal Engineer - L7', minPoints: 210, maxPoints: 230}
+// Title thresholds per track (minimum points on each pillar)
+// Pillars: Technology, System, People, Process, Influence
+// Points per milestone: 10, 20, 30, 40, 50; 0 means no milestone.
+export const titles = [
+  { label: 'L1 Engineer', thresholds: { TECHNOLOGY: 10, SYSTEM: 10, PEOPLE: 10, PROCESS: 10, INFLUENCE: 10 } },
+  { label: 'L2 Engineer', thresholds: { TECHNOLOGY: 20, SYSTEM: 20, PEOPLE: 10, PROCESS: 20, INFLUENCE: 10 } },
+  { label: 'L3 Engineer', thresholds: { TECHNOLOGY: 20, SYSTEM: 30, PEOPLE: 20, PROCESS: 20, INFLUENCE: 20 } },
+  { label: 'L4 Senior Engineer', thresholds: { TECHNOLOGY: 30, SYSTEM: 30, PEOPLE: 30, PROCESS: 30, INFLUENCE: 20 } },
+  { label: 'L5 Senior Engineer', thresholds: { TECHNOLOGY: 40, SYSTEM: 40, PEOPLE: 30, PROCESS: 40, INFLUENCE: 30 } },
+  { label: 'L6 Staff Engineer', thresholds: { TECHNOLOGY: 50, SYSTEM: 40, PEOPLE: 40, PROCESS: 40, INFLUENCE: 40 } },
+  { label: 'L7 Principal Engineer', thresholds: { TECHNOLOGY: 50, SYSTEM: 50, PEOPLE: 40, PROCESS: 40, INFLUENCE: 50 } },
+  { label: 'L6 Architect', thresholds: { TECHNOLOGY: 30, SYSTEM: 50, PEOPLE: 40, PROCESS: 40, INFLUENCE: 40 } },
+  { label: 'L7 Principal Architect', thresholds: { TECHNOLOGY: 30, SYSTEM: 50, PEOPLE: 40, PROCESS: 40, INFLUENCE: 50 } },
+  { label: 'L5 Engineering Team Lead', thresholds: { TECHNOLOGY: 30, SYSTEM: 40, PEOPLE: 40, PROCESS: 30, INFLUENCE: 30 } },
+  { label: 'L6 Engineering Manager', thresholds: { TECHNOLOGY: 30, SYSTEM: 40, PEOPLE: 50, PROCESS: 40, INFLUENCE: 40 } },
+  { label: 'L7 Head of Engineering', thresholds: { TECHNOLOGY: 30, SYSTEM: 40, PEOPLE: 50, PROCESS: 50, INFLUENCE: 50 } }
 ]
-
-export const titles = iCTitles
 
 export const maxLevel = 350
 
@@ -96,10 +102,32 @@ export type Track = {
   .range(['#FB8B24', '#D90368'])
   
   
+  const pointsByTrackFromMilestoneMap = (milestoneMap: MilestoneMap): {[TrackId]: number} => {
+    const result = {
+      TECHNOLOGY: 0,
+      SYSTEM: 0,
+      PEOPLE: 0,
+      PROCESS: 0,
+      INFLUENCE: 0,
+    };
+    trackIds.forEach(trackId => {
+      const milestone = milestoneMap[trackId];
+      if (milestone > 0) {
+        result[trackId] = tracks[trackId].milestones[milestone - 1].points;
+      }
+    });
+    return result;
+  };
+
   export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
-      const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
-      return iCTitles
-        .filter(title => (title.minPoints === undefined || totalPoints.IC >= title.minPoints)
-          && (title.maxPoints === undefined || totalPoints.IC <= title.maxPoints))
-        .map(title => title.label)
+      const pointsByTrack = pointsByTrackFromMilestoneMap(milestoneMap)
+      const list = titles
+        .filter(t =>
+          Object.entries(t.thresholds).every(([trackId, minPoints]) => {
+            // $FlowFixMe: trackId is a TrackId key
+            return pointsByTrack[trackId] >= (minPoints || 0)
+          })
+        )
+        .map(t => t.label)
+      return list.length ? list : ['No eligible title yet']
   }
