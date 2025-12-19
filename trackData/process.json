@@ -1,90 +1,66 @@
 {
   "displayName": "Process",
   "category": "IC",
-  "description": "Improves how teams deliver through clear standards, feedback loops, and adaptability.",
+  "description": "Ownership of delivery and process improvements.",
   "milestones": [
     {
       "points": 10,
-      "summary": "L1 Engineer - Process",
+      "summary": "1 Follow",
       "signals": [
-        "Follows established team processes and standards (DoR, DoD)",
-        "Keeps work items up to date and communicates progress"
+        "I follow established team processes and deliver a consistent flow of features",
+        "I adhere to agreed standards (e.g., DoR, DoD)"
       ],
       "examples": [
-        "Ensured stories met DoR/DoD before moving to production",
-        "Updated task status daily during a sprint"
+        "I ensure all my stories meet the Definition of Ready (DoR) and Definition of Done (DoD) before moving them to production",
+        "I follow the team's deployment process and maintain clear communication during releases"
       ]
     },
     {
       "points": 20,
-      "summary": "L2 Engineer - Process",
+      "summary": "2 Enforce",
       "signals": [
-        "Clarifies and enforces team processes and their benefits",
-        "Encourages participation in ceremonies and feedback loops"
+        "I enforce and clarify team processes, ensuring everyone understands their benefits and trade-offs",
+        "I fit processes into lean/agile/project management principles"
       ],
       "examples": [
-        "Reminded the team to keep retros focused on actionable items",
-        "Documented trade-offs of a deployment policy for the team"
+        "I encourage active participation in retrospectives and sprint reviews, emphasizing the importance of continuous improvement and open feedback loops",
+        "I documented the trade-offs of our deployment policy and helped the team understand its benefits"
       ]
     },
     {
       "points": 30,
-      "summary": "L3 Engineer - Process",
+      "summary": "3 Challenge",
       "signals": [
-        "Challenges inefficient processes and advocates for quality practices",
-        "Raises concerns with data and suggests improvements"
+        "I challenge existing processes by identifying areas for improvement",
+        "I raise concerns about inefficiencies and advocate for quality practices (e.g., end-to-end tests, vendor coordination)"
       ],
       "examples": [
-        "Proposed adding end-to-end tests after observing defect trends",
-        "Highlighted vendor coordination gaps and suggested adjustments"
+        "I noticed we rely only on unit tests, so I proposed implementing end-to-end tests for better coverage, presenting data on defect rates to support my case",
+        "I highlighted vendor coordination gaps and suggested adjustments to improve delivery speed"
       ]
     },
     {
       "points": 40,
-      "summary": "L4 Senior Engineer - Process",
+      "summary": "4 Adjust",
       "signals": [
-        "Adapts and refines processes based on feedback and metrics",
-        "Guides the team through changes balancing speed and quality"
+        "I adapt and refine team processes and vendor collaboration based on feedback and metrics",
+        "I guide the team through changes to balance delivery speed, quality, and vendor collaboration"
       ],
       "examples": [
-        "Reduced required approvals after measuring impact on throughput",
-        "Introduced release health reviews to improve stability"
+        "We realized requiring two approvals on each PR slowed us down without improving quality. I led the change to only one approval, monitoring throughput and defect rates to ensure effectiveness",
+        "I introduced release health reviews based on metrics and helped the team adjust the deployment cadence"
       ]
     },
     {
       "points": 50,
-      "summary": "L5 Senior Engineer - Process",
+      "summary": "5 Define",
       "signals": [
-        "Designs processes suited to team maturity and scale",
-        "Aligns ways of working with lean/agile principles and clear SLAs"
+        "I design processes that match the team's maturity level",
+        "I align with lean/agile/project management methodologies and set up regular feedback loops for continuous improvement"
       ],
       "examples": [
-        "Created a disaster recovery playbook and regular drills",
-        "Defined vendor SLAs and collaboration frameworks"
-      ]
-    },
-    {
-      "points": 60,
-      "summary": "L6 Staff Engineer - Process",
-      "signals": [
-        "Adjusts processes across multiple teams to enable cross-team delivery",
-        "Introduces metrics that reveal system and organizational health"
-      ],
-      "examples": [
-        "Rolled out a shared change management process across two tribes",
-        "Standardized incident postmortems with measurable follow-ups"
-      ]
-    },
-    {
-      "points": 70,
-      "summary": "L7 Principal Engineer - Process",
-      "signals": [
-        "Defines organization-wide processes that balance autonomy and alignment",
-        "Ensures feedback loops drive continuous improvement at scale"
-      ],
-      "examples": [
-        "Designed a company-wide engineering operating model with governance",
-        "Established a cross-org review rhythm that improved lead times"
+        "I created a disaster recovery process and playbook, ensuring we maintain both speed and quality. I also established vendor SLAs and collaboration frameworks to streamline delivery ownership",
+        "I designed a company-wide engineering operating model that balanced autonomy with alignment"
       ]
     }
   ]

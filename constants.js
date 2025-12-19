@@ -7,7 +7,7 @@ import PROCESS from './trackData/process.json'
 import INFLUENCE from './trackData/influence.json'
 
 export type TrackId = 'TECHNOLOGY' | 'SYSTEM' | 'PEOPLE' | 'PROCESS' | 'INFLUENCE'
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+export type Milestone = 0 | 1 | 2 | 3 | 4 | 5 
 
 export type MilestoneMap = {
   'TECHNOLOGY': Milestone,
@@ -16,16 +16,16 @@ export type MilestoneMap = {
   'PROCESS': Milestone,
   'INFLUENCE': Milestone,
 }
-export const milestones = [0, 1, 2, 3, 4, 5, 6, 7]
+export const milestones = [0, 1, 2, 3, 4, 5]
 
 export const iCTitles = [
-  {label: 'Software Engineer - IC1', minPoints: 0, maxPoints: 60},
-  {label: 'Software Engineer - IC2', minPoints: 60, maxPoints: 120},
-  {label: 'Software Engineer - IC3', minPoints: 120, maxPoints: 180},
-  {label: 'Software Engineer - IC4', minPoints: 180, maxPoints: 240},
-  {label: 'Software Engineer - IC5', minPoints: 240, maxPoints: 300},
-  {label: 'Software Engineer - IC6', minPoints: 300, maxPoints: 340},
-  {label: 'Software Engineer - IC7', minPoints: 340}
+  {label: 'Software Engineer - L1', minPoints: 0, maxPoints: 60},
+  {label: 'Software Engineer - L2', minPoints: 60, maxPoints: 90},
+  {label: 'Software Engineer - L3', minPoints: 80, maxPoints: 110},
+  {label: 'Senior Software Engineer - L4', minPoints: 100, maxPoints: 130},
+  {label: 'Senior Software Engineer - L5', minPoints: 140, maxPoints: 180},
+  {label: 'Staff / Architect - L6', minPoints: 180, maxPoints: 210},
+  {label: 'Principal Engineer - L7', minPoints: 210, maxPoints: 230}
 ]
 
 export const titles = iCTitles

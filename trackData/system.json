@@ -1,90 +1,66 @@
 {
   "displayName": "System",
   "category": "IC",
-  "description": "Designs, operates, and evolves systems with reliability, scalability, and clear ownership.",
+  "description": "Ability to drive system evolution through architecture and domain expertise.",
   "milestones": [
     {
       "points": 10,
-      "summary": "L1 Engineer - System",
+      "summary": "1 Enhance",
       "signals": [
-        "Delivers small features and bug fixes with basic domain understanding",
-        "Follows non-functional requirements with guidance"
+        "I successfully push new features and bug fixes to improve and extend the system",
+        "I apply domain knowledge while meeting non-functional requirements like usability and security"
       ],
       "examples": [
-        "Extended a UI to show additional fields while meeting basic security expectations",
-        "Fixed a minor bug and verified it against acceptance criteria"
+        "I enhanced the transaction log UI to display additional data crucial for reconciliation",
+        "I fixed a critical bug and verified it meets performance and security constraints"
       ]
     },
     {
       "points": 20,
-      "summary": "L2 Engineer - System",
+      "summary": "2 Design",
       "signals": [
-        "Designs and implements medium features while reducing tech debt",
-        "Checks solutions against NFRs (latency, scalability, security)"
+        "I design and implement medium-to-large features while reducing technical debt",
+        "I ensure compliance and alignment with non-functional requirements (NFRs)"
       ],
       "examples": [
-        "Implemented a new report type and validated performance constraints",
-        "Refined requirements with stakeholders before coding"
+        "I created a new report type for data settlements, collaborating with stakeholders and verifying latency, scalability, and security constraints",
+        "I refined requirements and designed the system to meet both business and technical needs"
       ]
     },
     {
       "points": 30,
-      "summary": "L3 Engineer - System",
+      "summary": "3 Own",
       "signals": [
-        "Owns production operation, monitoring, and SLAs for owned services",
-        "Proactively mitigates security or performance risks"
+        "I take responsibility for the system's production operation, monitoring, and SLAs",
+        "I proactively address issues and mitigate security or performance risks"
       ],
       "examples": [
-        "Added alerts and runbooks for a core service and handled incidents end to end",
-        "Improved caching to reduce error rates during peak traffic"
+        "When a core service breaks, I detect the issue, assess the impact on SLAs (e.g., transaction throughput, fraud checks), and fix it before customers are affected",
+        "I implemented alerting and runbooks for critical services and handled incidents end to end"
       ]
     },
     {
       "points": 40,
-      "summary": "L4 Senior Engineer - System",
+      "summary": "4 Evolve",
       "signals": [
-        "Evolves system architecture for future requirements and cross-team alignment",
-        "Coordinates workflows and defines clear NFRs"
+        "I evolve the system architecture to support future requirements",
+        "I coordinate with other teams and establish well-defined NFRs (performance, security, reliability)"
       ],
       "examples": [
-        "Redesigned a legacy service for horizontal scale and coordinated data flow updates",
-        "Facilitated alignment on SLAs across dependent teams"
+        "A legacy service couldn't scale horizontally for peak loads. I redesigned it to handle parallel requests and coordinated with other teams to ensure consistent data flows and updated SLAs",
+        "I led cross-team alignment on architectural trade-offs to unblock product launches"
       ]
     },
     {
       "points": 50,
-      "summary": "L5 Senior Engineer - System",
+      "summary": "5 Lead",
       "signals": [
-        "Leads technical excellence across multiple services or subsystems",
-        "Facilitates trade-off discussions on cost, performance, and resilience"
+        "I drive the technical excellence of the system, making architectural decisions across multiple teams",
+        "I facilitate trade-off discussions (e.g., cost vs. performance) and ensure alignment"
       ],
       "examples": [
-        "Defined a multi-tenant architecture serving several product areas",
-        "Drove decisions on partitioning strategy with clear risk analysis"
-      ]
-    },
-    {
-      "points": 60,
-      "summary": "L6 Staff Engineer - System",
-      "signals": [
-        "Guides system evolution across multiple teams with strong architectural judgment",
-        "Ensures designs remain operable, observable, and auditable"
-      ],
-      "examples": [
-        "Authored architecture guardrails adopted by multiple teams for new services",
-        "Led a cross-team migration to a resilient event backbone"
-      ]
-    },
-    {
-      "points": 70,
-      "summary": "L7 Principal Engineer - System",
-      "signals": [
-        "Sets organization-wide architectural direction with long-term perspective",
-        "Balances competing constraints while keeping systems adaptable"
-      ],
-      "examples": [
-        "Defined the company-wide reliability model and ensured platform fit across domains",
-        "Guided strategic redesigns to meet future scale and regulatory needs"
+        "I designed a new multi-tenant platform architecture, working with domain experts to incorporate regulatory constraints and orchestrating cross-team decisions",
+        "I drove architectural decisions that balanced cost, performance, and reliability across the platform"
       ]
     }
   ]

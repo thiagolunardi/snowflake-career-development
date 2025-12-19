@@ -1,90 +1,66 @@
 {
   "displayName": "Technology",
   "category": "IC",
-  "description": "Builds and advances technical solutions through curiosity, depth, and creation.",
+  "description": "Knowledge and application of relevant technologies, tools, and best practices.",
   "milestones": [
     {
       "points": 10,
-      "summary": "L1 Engineer - Technology",
+      "summary": "1 Adopt",
       "signals": [
-        "Actively learns and applies team-defined tools, practices, and standards",
-        "Seeks guidance to follow existing implementations and patterns"
+        "I actively learn and apply the technologies, tools, and practices defined by the team",
+        "I seek guidance to follow existing implementations and patterns"
       ],
       "examples": [
-        "Built a small REST API by following an existing implementation and best practices",
-        "Asked a mentor to review initial changes to align with team conventions"
+        "I created new REST APIs by following an existing implementation and best practices",
+        "I actively learn from teammates and incorporate feedback on technology choices"
       ]
     },
     {
       "points": 20,
-      "summary": "L2 Engineer - Technology",
+      "summary": "2 Specialize",
       "signals": [
-        "Becomes the go-to person for one technology, tool, or methodology",
-        "Expands expertise proactively beyond immediate tasks"
+        "I become the go-to person for one or more technologies, tools, or methodologies",
+        "I proactively expand my expertise beyond immediate tasks"
       ],
       "examples": [
-        "Documented OAuth authentication patterns for the team",
-        "Introduced a lint rule set to improve consistency"
+        "I have in-depth knowledge of the OAuth protocol and best authentication practices",
+        "I documented and shared patterns that became team standards"
       ]
     },
     {
       "points": 30,
-      "summary": "L3 Engineer - Technology",
+      "summary": "3 Evangelize",
       "signals": [
-        "Introduces new tools or practices that improve team effectiveness",
-        "Balances experimentation with reliable delivery"
+        "I research, prototype, and introduce new technologies, tools, or practices that improve the team's effectiveness",
+        "I balance experimentation with reliable delivery"
       ],
       "examples": [
-        "Piloted a feature flag library and rolled it out with a migration plan",
-        "Benchmarked alternative data stores and presented trade-offs"
+        "After detailed research, I successfully introduced AlloyDB to improve our database scalability",
+        "I piloted a feature flag library and rolled it out with a clear migration plan"
       ]
     },
     {
       "points": 40,
-      "summary": "L4 Senior Engineer - Technology",
+      "summary": "4 Master",
       "signals": [
-        "Deeply understands the team’s tech stack and its operational characteristics",
-        "Guides teammates on architecture, testing, and reliability"
+        "I deeply understand the entire technical ecosystem, including architecture, tools, and best practices",
+        "I drive improvements across the team and provide guidance on complex technical decisions"
       ],
       "examples": [
-        "Created guidance on CI/CD best practices for the service suite",
-        "Led pairing sessions to improve testing strategies"
+        "I provide guidance on Kotlin, CI/CD best practices, or testing strategies to enhance system reliability",
+        "I led pairing sessions to improve testing strategies across the team"
       ]
     },
     {
       "points": 50,
-      "summary": "L5 Senior Engineer - Technology",
+      "summary": "5 Create",
       "signals": [
-        "Masters the broader technical ecosystem and drives cross-team improvements",
-        "Shapes standards that raise quality and velocity"
+        "I design and develop new technologies, tools, or practices that significantly improve engineering effectiveness",
+        "My contributions are widely adopted and improve quality across multiple teams"
       ],
       "examples": [
-        "Standardized observability patterns adopted by multiple teams",
-        "Refactored a shared library to simplify onboarding across services"
-      ]
-    },
-    {
-      "points": 60,
-      "summary": "L6 Staff Engineer - Technology",
-      "signals": [
-        "Designs or develops new technologies, tools, or practices with multi-team impact",
-        "Ensures new capabilities are widely adoptable and documented"
-      ],
-      "examples": [
-        "Built a contract-testing framework rolled out across several product areas",
-        "Created a migration toolkit that reduced upgrade time across teams"
-      ]
-    },
-    {
-      "points": 70,
-      "summary": "L7 Principal Engineer - Technology",
-      "signals": [
-        "Creates or steers technology that shifts how the organization delivers software",
-        "Sets long-term technical direction and mentors others to extend it"
-      ],
-      "examples": [
-        "Defined a new platform capability adopted org-wide (e.g., multi-tenant runtime)",
-        "Established a durable tech strategy with reference implementations and playbooks"
+        "I developed a new integration testing framework that streamlined automated testing across multiple teams",
+        "I created a standardized observability pattern that became the company standard"
       ]
     }
   ]

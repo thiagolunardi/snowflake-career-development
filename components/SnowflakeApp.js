@@ -1,7 +1,6 @@
 // @flow
 
 import TrackSelector from '../components/TrackSelector'
-import MTrackSelector from '../components/MTrackSelector'
 import CareerProjector from '../components/CareerProjector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'

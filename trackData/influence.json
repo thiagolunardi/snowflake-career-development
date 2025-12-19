@@ -1,90 +1,66 @@
 {
   "displayName": "Influence",
   "category": "IC",
-  "description": "Scales impact through communication, alignment, and driving change beyond one team.",
+  "description": "Ability to drive organizational growth and change.",
   "milestones": [
     {
       "points": 10,
-      "summary": "L1 Engineer - Influence",
+      "summary": "1 Subsystem",
       "signals": [
-        "Impacts one module or subsystem with clear communication",
-        "Shares knowledge with immediate stakeholders"
+        "I have an impact on one or more system modules, focusing on local improvements",
+        "I communicate directly with the module's stakeholders"
       ],
       "examples": [
-        "Improved a service module and posted a short write-up for the team",
-        "Answered questions about recent changes in standups"
+        "I predominantly work on one service my team owns, ensuring best practices are followed and sharing knowledge with immediate stakeholders",
+        "I improved a service module and posted a summary for the team"
       ]
     },
     {
       "points": 20,
-      "summary": "L2 Engineer - Influence",
+      "summary": "2 Team",
       "signals": [
-        "Influences the whole team through ideas and solutions",
-        "Leads discussions on best practices within the team"
+        "I influence the entire team, not just specific modules",
+        "I effectively communicate ideas, present solutions, and facilitate knowledge sharing"
       ],
       "examples": [
-        "Ran a demo to align the team on a new testing approach",
-        "Documented lessons learned and presented them in a team review"
+        "I'm a key team member who regularly leads discussions on best practices, organizes internal demos, and encourages continuous feedback loops",
+        "I ran a demo to align the team on a new testing approach and documented lessons learned"
       ]
     },
     {
       "points": 30,
-      "summary": "L3 Engineer - Influence",
+      "summary": "3 Cross-Team",
       "signals": [
-        "Engages other teams to share learnings and align decisions",
-        "Coordinates cross-team technical discussions"
+        "I expand my influence beyond my own team, actively engaging with other teams",
+        "I share learnings, align on processes, and coordinate technical decisions"
       ],
       "examples": [
-        "Presented a solution adopted by a neighboring team",
-        "Facilitated a design review with multiple teams for an integration"
+        "I participate in cross-team forums, present solutions that multiple teams adopt, and maintain open channels for exchanging feedback and domain insights",
+        "I facilitated a design review with multiple teams for an integration and coordinated their decisions"
       ]
     },
     {
       "points": 40,
-      "summary": "L4 Senior Engineer - Influence",
+      "summary": "4 Multiple Teams",
       "signals": [
-        "Drives impact across multiple teams, scaling best practices",
-        "Establishes external networks that improve outcomes"
+        "I have a direct impact on more than one team, scaling best practices and improvements",
+        "I establish external networks and drive improvements that shape multiple teams' work and outcomes"
       ],
       "examples": [
-        "Led a compliance initiative across three teams and an external vendor",
-        "Shared reusable patterns that improved delivery speed across squads"
+        "I led a six-month compliance initiative involving three internal teams and an external vendor, ensuring alignment, effective communication, and timely delivery across all stakeholders",
+        "I shared reusable patterns that improved delivery speed across multiple squads"
       ]
     },
     {
       "points": 50,
-      "summary": "L5 Senior Engineer - Influence",
+      "summary": "5 Company",
       "signals": [
-        "Impacts the broader organization through change and knowledge sharing",
-        "Champions initiatives that improve engineering culture"
+        "I drive organizational change across the entire tech organization",
+        "I build external networks, champion best practices, and ensure knowledge sharing at scale"
       ],
       "examples": [
-        "Presented team achievements in an org-wide forum and secured buy-in",
-        "Authored guidance adopted across the org for onboarding"
-      ]
-    },
-    {
-      "points": 60,
-      "summary": "L6 Staff Engineer - Influence",
-      "signals": [
-        "Steers multi-team roadmaps and aligns stakeholders on strategy",
-        "Balances competing priorities to maximize customer value"
-      ],
-      "examples": [
-        "Aligned several teams on a platform upgrade timeline to unblock launches",
-        "Negotiated scope trade-offs with product and engineering leads"
-      ]
-    },
-    {
-      "points": 70,
-      "summary": "L7 Principal Engineer - Influence",
-      "signals": [
-        "Drives company-wide change and external reputation",
-        "Communicates complex strategy clearly to varied audiences"
-      ],
-      "examples": [
-        "Led an org-wide initiative improving flow and shared learnings externally",
-        "Influenced senior leadership decisions with clear technical narratives"
+        "I designed and implemented the Flow initiative, introducing a new cross-organizational process for continuous improvement, recognized both internally and externally through presentations and industry meetups",
+        "I established a company-wide mentoring program and influenced senior leadership decisions with clear technical narratives"
       ]
     }
   ]
