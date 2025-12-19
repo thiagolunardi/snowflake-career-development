@@ -1,0 +1,91 @@
+{
+  "displayName": "System",
+  "category": "IC",
+  "description": "Designs, operates, and evolves systems with reliability, scalability, and clear ownership.",
+  "milestones": [
+    {
+      "points": 10,
+      "summary": "L1 Engineer - System",
+      "signals": [
+        "Delivers small features and bug fixes with basic domain understanding",
+        "Follows non-functional requirements with guidance"
+      ],
+      "examples": [
+        "Extended a UI to show additional fields while meeting basic security expectations",
+        "Fixed a minor bug and verified it against acceptance criteria"
+      ]
+    },
+    {
+      "points": 20,
+      "summary": "L2 Engineer - System",
+      "signals": [
+        "Designs and implements medium features while reducing tech debt",
+        "Checks solutions against NFRs (latency, scalability, security)"
+      ],
+      "examples": [
+        "Implemented a new report type and validated performance constraints",
+        "Refined requirements with stakeholders before coding"
+      ]
+    },
+    {
+      "points": 30,
+      "summary": "L3 Engineer - System",
+      "signals": [
+        "Owns production operation, monitoring, and SLAs for owned services",
+        "Proactively mitigates security or performance risks"
+      ],
+      "examples": [
+        "Added alerts and runbooks for a core service and handled incidents end to end",
+        "Improved caching to reduce error rates during peak traffic"
+      ]
+    },
+    {
+      "points": 40,
+      "summary": "L4 Senior Engineer - System",
+      "signals": [
+        "Evolves system architecture for future requirements and cross-team alignment",
+        "Coordinates workflows and defines clear NFRs"
+      ],
+      "examples": [
+        "Redesigned a legacy service for horizontal scale and coordinated data flow updates",
+        "Facilitated alignment on SLAs across dependent teams"
+      ]
+    },
+    {
+      "points": 50,
+      "summary": "L5 Senior Engineer - System",
+      "signals": [
+        "Leads technical excellence across multiple services or subsystems",
+        "Facilitates trade-off discussions on cost, performance, and resilience"
+      ],
+      "examples": [
+        "Defined a multi-tenant architecture serving several product areas",
+        "Drove decisions on partitioning strategy with clear risk analysis"
+      ]
+    },
+    {
+      "points": 60,
+      "summary": "L6 Staff Engineer - System",
+      "signals": [
+        "Guides system evolution across multiple teams with strong architectural judgment",
+        "Ensures designs remain operable, observable, and auditable"
+      ],
+      "examples": [
+        "Authored architecture guardrails adopted by multiple teams for new services",
+        "Led a cross-team migration to a resilient event backbone"
+      ]
+    },
+    {
+      "points": 70,
+      "summary": "L7 Principal Engineer - System",
+      "signals": [
+        "Sets organization-wide architectural direction with long-term perspective",
+        "Balances competing constraints while keeping systems adaptable"
+      ],
+      "examples": [
+        "Defined the company-wide reliability model and ensured platform fit across domains",
+        "Guided strategic redesigns to meet future scale and regulatory needs"
+      ]
+    }
+  ]
+}

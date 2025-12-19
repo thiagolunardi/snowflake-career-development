@@ -1,0 +1,91 @@
+{
+  "displayName": "People",
+  "category": "IC",
+  "description": "Grows self and others through mentorship, coordination, and leadership.",
+  "milestones": [
+    {
+      "points": 10,
+      "summary": "L1 Engineer - People",
+      "signals": [
+        "Learns quickly, embraces feedback, and shows a growth mindset",
+        "Steps up when asked and seeks help appropriately"
+      ],
+      "examples": [
+        "Paired to learn a new build tool and applied the feedback",
+        "Asked clarifying questions and incorporated review comments"
+      ]
+    },
+    {
+      "points": 20,
+      "summary": "L2 Engineer - People",
+      "signals": [
+        "Supports teammates with empathy and knowledge sharing",
+        "Onboards others and helps them understand scope"
+      ],
+      "examples": [
+        "Helped a new teammate set up local environments and explained workflows",
+        "Shared a short how-to on a React hook the team uses"
+      ]
+    },
+    {
+      "points": 30,
+      "summary": "L3 Engineer - People",
+      "signals": [
+        "Actively mentors others with constructive feedback and reflection",
+        "Resolves conflicts with calm, logical reasoning"
+      ],
+      "examples": [
+        "Coached a peer on testing practices through review and pairing",
+        "Facilitated a conversation to align on design disagreements"
+      ]
+    },
+    {
+      "points": 40,
+      "summary": "L4 Senior Engineer - People",
+      "signals": [
+        "Coordinates team members to keep delivery smooth and focused",
+        "Moderates discussions and handles conflicts with empathy"
+      ],
+      "examples": [
+        "Reorganized tasks when a lead was out to keep a release on track",
+        "Led a design session ensuring all voices were heard"
+      ]
+    },
+    {
+      "points": 50,
+      "summary": "L5 Senior Engineer - People",
+      "signals": [
+        "Provides mentorship that accelerates others’ growth across the team",
+        "Shapes team culture and hiring standards"
+      ],
+      "examples": [
+        "Designed a structured onboarding plan adopted by the team",
+        "Interviewed and calibrated candidates to raise the bar"
+      ]
+    },
+    {
+      "points": 60,
+      "summary": "L6 Staff Engineer - People",
+      "signals": [
+        "Coordinates collaboration across multiple teams and stakeholders",
+        "Cultivates an environment of knowledge sharing at scale"
+      ],
+      "examples": [
+        "Organized a cross-team guild to spread best practices",
+        "Mentored several engineers toward Staff readiness"
+      ]
+    },
+    {
+      "points": 70,
+      "summary": "L7 Principal Engineer - People",
+      "signals": [
+        "Guides leaders and teams to flourish, setting goals and inspiring performance",
+        "Builds networks that strengthen the organization’s talent and culture"
+      ],
+      "examples": [
+        "Counseled multiple teams’ leads through major delivery milestones",
+        "Established a company-wide mentoring program with clear success metrics"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "displayName": "Process",
+  "category": "IC",
+  "description": "Improves how teams deliver through clear standards, feedback loops, and adaptability.",
+  "milestones": [
+    {
+      "points": 10,
+      "summary": "L1 Engineer - Process",
+      "signals": [
+        "Follows established team processes and standards (DoR, DoD)",
+        "Keeps work items up to date and communicates progress"
+      ],
+      "examples": [
+        "Ensured stories met DoR/DoD before moving to production",
+        "Updated task status daily during a sprint"
+      ]
+    },
+    {
+      "points": 20,
+      "summary": "L2 Engineer - Process",
+      "signals": [
+        "Clarifies and enforces team processes and their benefits",
+        "Encourages participation in ceremonies and feedback loops"
+      ],
+      "examples": [
+        "Reminded the team to keep retros focused on actionable items",
+        "Documented trade-offs of a deployment policy for the team"
+      ]
+    },
+    {
+      "points": 30,
+      "summary": "L3 Engineer - Process",
+      "signals": [
+        "Challenges inefficient processes and advocates for quality practices",
+        "Raises concerns with data and suggests improvements"
+      ],
+      "examples": [
+        "Proposed adding end-to-end tests after observing defect trends",
+        "Highlighted vendor coordination gaps and suggested adjustments"
+      ]
+    },
+    {
+      "points": 40,
+      "summary": "L4 Senior Engineer - Process",
+      "signals": [
+        "Adapts and refines processes based on feedback and metrics",
+        "Guides the team through changes balancing speed and quality"
+      ],
+      "examples": [
+        "Reduced required approvals after measuring impact on throughput",
+        "Introduced release health reviews to improve stability"
+      ]
+    },
+    {
+      "points": 50,
+      "summary": "L5 Senior Engineer - Process",
+      "signals": [
+        "Designs processes suited to team maturity and scale",
+        "Aligns ways of working with lean/agile principles and clear SLAs"
+      ],
+      "examples": [
+        "Created a disaster recovery playbook and regular drills",
+        "Defined vendor SLAs and collaboration frameworks"
+      ]
+    },
+    {
+      "points": 60,
+      "summary": "L6 Staff Engineer - Process",
+      "signals": [
+        "Adjusts processes across multiple teams to enable cross-team delivery",
+        "Introduces metrics that reveal system and organizational health"
+      ],
+      "examples": [
+        "Rolled out a shared change management process across two tribes",
+        "Standardized incident postmortems with measurable follow-ups"
+      ]
+    },
+    {
+      "points": 70,
+      "summary": "L7 Principal Engineer - Process",
+      "signals": [
+        "Defines organization-wide processes that balance autonomy and alignment",
+        "Ensures feedback loops drive continuous improvement at scale"
+      ],
+      "examples": [
+        "Designed a company-wide engineering operating model with governance",
+        "Established a cross-org review rhythm that improved lead times"
+      ]
+    }
+  ]
+}

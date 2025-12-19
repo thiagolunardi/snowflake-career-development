@@ -1,0 +1,91 @@
+{
+  "displayName": "Influence",
+  "category": "IC",
+  "description": "Scales impact through communication, alignment, and driving change beyond one team.",
+  "milestones": [
+    {
+      "points": 10,
+      "summary": "L1 Engineer - Influence",
+      "signals": [
+        "Impacts one module or subsystem with clear communication",
+        "Shares knowledge with immediate stakeholders"
+      ],
+      "examples": [
+        "Improved a service module and posted a short write-up for the team",
+        "Answered questions about recent changes in standups"
+      ]
+    },
+    {
+      "points": 20,
+      "summary": "L2 Engineer - Influence",
+      "signals": [
+        "Influences the whole team through ideas and solutions",
+        "Leads discussions on best practices within the team"
+      ],
+      "examples": [
+        "Ran a demo to align the team on a new testing approach",
+        "Documented lessons learned and presented them in a team review"
+      ]
+    },
+    {
+      "points": 30,
+      "summary": "L3 Engineer - Influence",
+      "signals": [
+        "Engages other teams to share learnings and align decisions",
+        "Coordinates cross-team technical discussions"
+      ],
+      "examples": [
+        "Presented a solution adopted by a neighboring team",
+        "Facilitated a design review with multiple teams for an integration"
+      ]
+    },
+    {
+      "points": 40,
+      "summary": "L4 Senior Engineer - Influence",
+      "signals": [
+        "Drives impact across multiple teams, scaling best practices",
+        "Establishes external networks that improve outcomes"
+      ],
+      "examples": [
+        "Led a compliance initiative across three teams and an external vendor",
+        "Shared reusable patterns that improved delivery speed across squads"
+      ]
+    },
+    {
+      "points": 50,
+      "summary": "L5 Senior Engineer - Influence",
+      "signals": [
+        "Impacts the broader organization through change and knowledge sharing",
+        "Champions initiatives that improve engineering culture"
+      ],
+      "examples": [
+        "Presented team achievements in an org-wide forum and secured buy-in",
+        "Authored guidance adopted across the org for onboarding"
+      ]
+    },
+    {
+      "points": 60,
+      "summary": "L6 Staff Engineer - Influence",
+      "signals": [
+        "Steers multi-team roadmaps and aligns stakeholders on strategy",
+        "Balances competing priorities to maximize customer value"
+      ],
+      "examples": [
+        "Aligned several teams on a platform upgrade timeline to unblock launches",
+        "Negotiated scope trade-offs with product and engineering leads"
+      ]
+    },
+    {
+      "points": 70,
+      "summary": "L7 Principal Engineer - Influence",
+      "signals": [
+        "Drives company-wide change and external reputation",
+        "Communicates complex strategy clearly to varied audiences"
+      ],
+      "examples": [
+        "Led an org-wide initiative improving flow and shared learnings externally",
+        "Influenced senior leadership decisions with clear technical narratives"
+      ]
+    }
+  ]
+}
