@@ -22,11 +22,11 @@ export const milestones = [0, 1, 2, 3, 4, 5]
 // Pillars: Technology, System, People, Process, Influence
 // Points per milestone: 10, 20, 30, 40, 50; 0 means no milestone.
 export const titles = [
-  { label: 'L1 Engineer', thresholds: { TECHNOLOGY: 10, SYSTEM: 10, PEOPLE: 10, PROCESS: 10, INFLUENCE: 10 } },
-  { label: 'L2 Engineer', thresholds: { TECHNOLOGY: 20, SYSTEM: 20, PEOPLE: 10, PROCESS: 20, INFLUENCE: 10 } },
-  { label: 'L3 Engineer', thresholds: { TECHNOLOGY: 20, SYSTEM: 30, PEOPLE: 20, PROCESS: 20, INFLUENCE: 20 } },
-  { label: 'L4 Senior Engineer', thresholds: { TECHNOLOGY: 30, SYSTEM: 30, PEOPLE: 30, PROCESS: 30, INFLUENCE: 20 } },
-  { label: 'L5 Senior Engineer', thresholds: { TECHNOLOGY: 40, SYSTEM: 40, PEOPLE: 30, PROCESS: 40, INFLUENCE: 30 } },
+  { label: 'L1 Engineer (junior)', thresholds: { TECHNOLOGY: 10, SYSTEM: 10, PEOPLE: 10, PROCESS: 10, INFLUENCE: 10 } },
+  { label: 'L2 Engineer (entry)', thresholds: { TECHNOLOGY: 20, SYSTEM: 20, PEOPLE: 10, PROCESS: 20, INFLUENCE: 10 } },
+  { label: 'L3 Engineer (experienced)', thresholds: { TECHNOLOGY: 20, SYSTEM: 30, PEOPLE: 20, PROCESS: 20, INFLUENCE: 20 } },
+  { label: 'L4 Senior Engineer (entry)', thresholds: { TECHNOLOGY: 30, SYSTEM: 30, PEOPLE: 30, PROCESS: 30, INFLUENCE: 20 } },
+  { label: 'L5 Senior Engineer (experienced)', thresholds: { TECHNOLOGY: 40, SYSTEM: 40, PEOPLE: 30, PROCESS: 40, INFLUENCE: 30 } },
   { label: 'L6 Staff Engineer', thresholds: { TECHNOLOGY: 50, SYSTEM: 40, PEOPLE: 40, PROCESS: 40, INFLUENCE: 40 } },
   { label: 'L7 Principal Engineer', thresholds: { TECHNOLOGY: 50, SYSTEM: 50, PEOPLE: 40, PROCESS: 40, INFLUENCE: 50 } },
   { label: 'L6 Architect', thresholds: { TECHNOLOGY: 30, SYSTEM: 50, PEOPLE: 40, PROCESS: 40, INFLUENCE: 40 } },
