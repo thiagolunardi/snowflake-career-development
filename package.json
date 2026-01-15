@@ -6,12 +6,14 @@
   "license": "MIT",
   "dependencies": {
     "d3": "^4.11.0",
-    "next": "^4.0.0-beta.4",
+    "next": "^4.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
   "scripts": {
     "dev": "next",
+    "dev1": "next build",
+    "dev2": "next export",
     "export": "next build && next export",
     "flow": "flow",
     "deploy": "yarn run export && we deploy -p snowflake"
