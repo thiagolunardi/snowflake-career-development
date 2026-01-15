@@ -43,7 +43,7 @@ class TrackSelector extends React.Component<Props> {
           }
           .track-selector-label {
             text-align: center;
-            font-size: 11px;
+            font-size: 16px;
           }
         `}</style>
         <tbody>
