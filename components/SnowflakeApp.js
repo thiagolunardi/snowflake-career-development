@@ -22,9 +22,12 @@ type SnowflakeAppState = {
 type Props = {}
 
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
+  exportLinkRef: { current: null | HTMLAnchorElement }
+
   constructor(props: Props) {
     super(props)
     this.state = emptyState()
+    this.exportLinkRef = React.createRef()
   }
   
   componentDidUpdate() {
@@ -47,43 +50,22 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
   
   handleClicExport() {
-    
-    const headers = ["skillset projection"];
-    const rows = [eligibleTitles(this.state.milestoneByTrack).toString().split(',').join(' ')];
+    const { milestoneByTrack, name } = this.state
 
-    var headersAndValues = JSON.stringify(this.state.milestoneByTrack).replace(/\"/g,'').replace('}','').replace('{','').split(",");
-    
-    headersAndValues.forEach(element => {
-      const csvData = element.split(":");
-      headers.push(csvData[0]);
-      rows.push(csvData[1]);
-    });
-    
- 
-    const csvCon = [
-      headers,
-      rows
-    ];
-    
-    let csvContent = "data:text/csv;charset=utf-8," 
-    + csvCon.map(e => e.join(",")).join("\n");
-      
-    
-    var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    
-    
-    link.setAttribute("download", this.state.name+"PerformanceReview.csv");
-    
-    //link.setAttribute("download", "my_data.csv");
-    
-    
-    document.body.appendChild(link); // Required for FF
-    
-    link.click(); // This will download the data file named "my_data.csv".
-    
-    
+    const headers = ['skillset projection', ...trackIds]
+    const values = [
+      eligibleTitles(milestoneByTrack).join(' '),
+      ...trackIds.map(id => milestoneByTrack[id])
+    ]
+    const csv = [headers, values].map(row => row.join(',')).join('\n')
+
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' })
+    const url = URL.createObjectURL(blob)
+    const link = this.exportLinkRef.current
+    link.href = url
+    link.download = `${name}PerformanceReview.csv`
+    link.click()
+    URL.revokeObjectURL(url)
   }
   
   
@@ -162,6 +144,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       <div>
        <button className="btn btn-default" onClick={this.handleClicExport.bind(this)}>Export to CSV</button>
        <button className="btn btn-default" onClick={this.handleClickNew.bind(this)}>reset snowflake</button>
+       <a ref={this.exportLinkRef} style={{display: 'none'}} aria-hidden="true" />
       </div>
       </div>
       <div>
