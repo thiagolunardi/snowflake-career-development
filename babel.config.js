@@ -8,6 +8,7 @@ module.exports = {
         },
       },
     ],
+    ['@babel/preset-react', { runtime: 'automatic' }],
   ],
   "plugins": ["transform-flow-strip-types"]
 };

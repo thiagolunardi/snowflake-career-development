@@ -6,21 +6,22 @@
   "license": "MIT",
   "dependencies": {
     "d3": "^4.11.0",
-    "next": "^4.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "scripts": {
     "dev": "next",
     "dev1": "next build",
     "dev2": "next export",
-    "export": "next build && next export",
+    "export": "next build",
     "flow": "flow",
     "deploy": "yarn run export && we deploy -p snowflake"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
     "@babel/preset-env": "^7.5.2",
+    "@babel/preset-react": "^7.28.5",
     "babel-jest": "^24.8.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "flow-bin": "^0.57.2",
