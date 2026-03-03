@@ -1,4 +1,6 @@
 
+import type { SnowflakeAppState } from '../constants';
+
 export const emptyState = (): SnowflakeAppState => {
     return {
         name: '',

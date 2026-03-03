@@ -1,23 +1,14 @@
-// @flow
-
 import TrackSelector from '../components/TrackSelector'
 import CareerProjector from '../components/CareerProjector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import type { Milestone, MilestoneMap, TrackId } from '../constants'
+import { eligibleTitles, trackIds, milestones } from '../constants'
+import type { Milestone, MilestoneMap, TrackId, SnowflakeAppState } from '../constants'
 import React from 'react'
 import Header from "./Header";
 import { hashToState, stateToHash } from "../src/hash";
 import { emptyState, defaultState } from "../src/state";
-
-type SnowflakeAppState = {
-  milestoneByTrack: MilestoneMap,
-  name: string,
-  title: string,
-  focusedTrackId: TrackId,
-}
 
 type Props = {}
 
@@ -197,7 +188,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       let milestone = prevMilestone + delta
       if (milestone < 0) milestone = 0
       if (milestone > 5) milestone = 5
-      this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
+      this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone as Milestone)
     }
 
     increaseFocusedMilestone = () => this.shiftFocusedTrackMilestoneByDelta(1)

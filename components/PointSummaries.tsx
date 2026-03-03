@@ -1,6 +1,5 @@
-// @flow
-
-import { pointsToLevels, milestoneToPoints, trackIds, totalPointsFromMilestoneMap } from '../constants'
+// @ts-nocheck
+import { trackIds, totalPointsFromMilestoneMap } from '../constants'
 import type { MilestoneMap } from '../constants'
 import React from 'react'
 

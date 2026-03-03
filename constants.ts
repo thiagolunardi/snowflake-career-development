@@ -1,4 +1,3 @@
-// @flow
 import * as d3 from 'd3'
 import TECHNOLOGY from './trackData/technology.json'
 import SYSTEM from './trackData/system.json'
@@ -45,21 +44,31 @@ export type Track = {
   milestones: {
     summary: string,
     signals: string[],
-    examples: string[]
+    examples: string[],
+    points?: number
   }[]
+}
+
+export type Tracks = { [key in TrackId]: Track }
+
+export type SnowflakeAppState = {
+  milestoneByTrack: MilestoneMap
+  name: string
+  title: string
+  focusedTrackId: TrackId
 }
   
   export const tracks: Tracks = {
     TECHNOLOGY, SYSTEM, PEOPLE, PROCESS, INFLUENCE
   };
   
-  export const trackIds: TrackId[] = Object.keys(tracks)
-  export const ICtrackIds: ICTrackId[] = Object.keys(tracks)
+  export const trackIds: TrackId[] = Object.keys(tracks) as TrackId[]
+  export const ICtrackIds: TrackId[] = Object.keys(tracks) as TrackId[]
   
   export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
     set.add(tracks[trackId].category)
     return set
-  }, new Set())
+  }, new Set<string>())
   
   export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
     let pointsByCategory = new Map()
@@ -80,7 +89,7 @@ export type Track = {
     })
   }
   
-  export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number => {
+  export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): { IC: number; M: number; Total: number } => {
     var sum = {IC: 0, M: 0, Total: 0};
     trackIds.map(trackId => {
       const milestone = milestoneMap[trackId]
@@ -102,7 +111,7 @@ export type Track = {
   .range(['#FB8B24', '#D90368'])
   
   
-  const pointsByTrackFromMilestoneMap = (milestoneMap: MilestoneMap): {[TrackId]: number} => {
+  const pointsByTrackFromMilestoneMap = (milestoneMap: MilestoneMap): Record<TrackId, number> => {
     const result = {
       TECHNOLOGY: 0,
       SYSTEM: 0,
@@ -124,8 +133,7 @@ export type Track = {
       const list = titles
         .filter(t =>
           Object.entries(t.thresholds).every(([trackId, minPoints]) => {
-            // $FlowFixMe: trackId is a TrackId key
-            return pointsByTrack[trackId] >= (minPoints || 0)
+          return pointsByTrack[trackId as TrackId] >= (minPoints || 0)
           })
         )
         .map(t => t.label)

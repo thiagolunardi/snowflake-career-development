@@ -1,10 +1,16 @@
-// @flow
-
 import React from 'react'
+import { eligibleTitles } from '../constants'
+import type { MilestoneMap } from '../constants'
 
-class HelpModal extends React.Component {
+type Props = {
+  milestoneByTrack: MilestoneMap,
+  currentTitle: string,
+  setTitleFn: (string) => void
+}
+
+class CareerProjector extends React.Component<Props> {
   render() {
-
+    const titles = eligibleTitles(this.props.milestoneByTrack)
     return (
       <div>
         <style jsx>{`
@@ -19,13 +25,9 @@ class HelpModal extends React.Component {
         `}
 
         </style>
-        <div className="modalBackdrop" >
+        <div>
 
-          <div style={{ margin: 'auto', background: 'white', border: 'purple', width:'500px', 'border-radius': '13px', padding: '21px'}}>
-          <button onClick={() => this.props.hideModalFn()} style={{float: 'right', color: 'white', backgroundColor: 'purple'}} class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-
+          <div style={{ margin: 'auto', background: 'white', border: 'purple', width:'500px', borderRadius: '13px', padding: '21px'}}>
             <h1>
               What is this?
             </h1>
@@ -36,15 +38,17 @@ class HelpModal extends React.Component {
             <p>We already have ideas on how to improve the framework further, and plan to continue iterating on it over time. </p>
 
             <h1>
-              Getting Started
+              Skillset Projection:
             </h1>
             
-            <p>Basically we want you the engineer to assess your skillset on different parameters. </p>
-            <p>The idea is by the end of the year, you have assesed your skills and a committee (EM + Tech + Architect) have assesed it as well. </p>
-            <p>Then we sit and talk about the discrepenices if there are any and we adjust. </p>
-            <p>And after that we can see what are the skills you want to have, where you want to go and we see how can we help you get there. </p>
+            <h2> 
 
-
+            {titles.map(title => (
+              <option key={title}>
+                {title}
+              </option>
+            ))}
+            </h2>
             
           </div>
         </div>
@@ -53,4 +57,5 @@ class HelpModal extends React.Component {
   }
 }
 
-export default HelpModal;
+export default CareerProjector
+

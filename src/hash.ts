@@ -1,5 +1,4 @@
-// @flow
-
+import type { SnowflakeAppState } from '../constants';
 import type {Milestone} from "../constants";
 import {trackIds} from "../constants";
 import { defaultState } from "./state";
@@ -26,11 +25,12 @@ const coerceMilestone = (value: number): Milestone => {
 
 export const stateToHash = (state: SnowflakeAppState) => {
     if (!state || !state.milestoneByTrack) return null;
-    const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title));
+    const milestones: (Milestone | string)[] = trackIds.map(trackId => state.milestoneByTrack[trackId]);
+    const values = milestones.concat(encodeURI(state.name), encodeURI(state.title));
     return values.join(',');
 };
 
-export const hashToState = (hash: String): ?SnowflakeAppState => {
+export const hashToState = (hash: string): SnowflakeAppState | null => {
     if (!hash) return null;
     const result = defaultState();
     const hashValues = hash.split('#')[1].split(',');

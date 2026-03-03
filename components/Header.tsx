@@ -1,10 +1,8 @@
-// @flow
-
 import React from 'react'
 import Help from "./Help";
 
 type Props = {
-  name: String,
+  name: string,
   setNameFn: (string) => void
 }
 

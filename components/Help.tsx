@@ -1,11 +1,10 @@
-// @flow
-
 import React from 'react'
 import HelpModal from "./HelpModal";
 
 type Props = {}
+type State = { showModal: boolean }
 
-class Help extends React.Component {
+class Help extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {

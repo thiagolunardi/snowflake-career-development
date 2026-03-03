@@ -17,13 +17,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@babel/plugin-transform-flow-strip-types": "^7.27.1",
     "@babel/preset-env": "^7.29.0",
     "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/react": "19.2.14",
     "babel-jest": "^30.2.0",
     "eslint": "8",
     "eslint-config-next": "14",
-    "flow-bin": "^0.303.0",
     "jest": "^30.2.0",
     "typescript": "^5.9.3"
   },

@@ -1,14 +1,7 @@
 module.exports = {
   presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current',
-        },
-      },
-    ],
+    ['@babel/preset-env', { targets: { node: 'current' } }],
     ['@babel/preset-react', { runtime: 'automatic' }],
+    ['@babel/preset-typescript', { allExtensions: true, isTSX: true }],
   ],
-  "plugins": ["@babel/plugin-transform-flow-strip-types"]
 };
