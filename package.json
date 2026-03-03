@@ -19,13 +19,12 @@
     "deploy": "yarn run export && we deploy -p snowflake"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/preset-env": "^7.5.2",
+    "@babel/core": "^7.29.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.27.1",
+    "@babel/preset-env": "^7.29.0",
     "@babel/preset-react": "^7.28.5",
-    "babel-jest": "^24.8.0",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "flow-bin": "^0.57.2",
-    "jest": "^24.8.0",
-    "wedeploy": "^4.2.0"
+    "babel-jest": "^30.2.0",
+    "flow-bin": "^0.303.0",
+    "jest": "^30.2.0"
   }
 }
