@@ -22,8 +22,7 @@ class NightingaleChart extends React.Component<Props> {
   constructor(props: *) {
     super(props)
 
-    this.colorScale = d3.scaleSequential(d3.interpolateWarm)
-      .domain([0, 5])
+    this.colorScale = d3.scaleSequential([0, 5], d3.interpolateWarm)
 
     this.radiusScale = d3.scaleBand()
       .domain(arcMilestones)
