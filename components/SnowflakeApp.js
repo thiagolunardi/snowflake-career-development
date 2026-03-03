@@ -44,12 +44,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     }
   }
   
-  handleClickNew() {
+  handleClickNew = () => {
     window.location.href = '';
     document.querySelector('.name-input').value = '';
   }
   
-  handleClicExport() {
+  handleClicExport = () => {
     const { milestoneByTrack, name } = this.state
 
     const headers = ['skillset projection', ...trackIds]
@@ -120,30 +120,30 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       <TrackSelector
       milestoneByTrack={this.state.milestoneByTrack}
       focusedTrackId={this.state.focusedTrackId}
-      setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
+      setFocusedTrackIdFn={this.setFocusedTrackId} />
       
       <div style={{display: 'flex'}}>
       <div style={{flex: 3}}>
       
       <KeyboardListener
-      selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
-      selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
-      increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
-      decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
+      selectNextTrackFn={this.selectNextTrack}
+      selectPrevTrackFn={this.selectPrevTrack}
+      increaseFocusedMilestoneFn={this.increaseFocusedMilestone}
+      decreaseFocusedMilestoneFn={this.decreaseFocusedMilestone} />
       <Track
       milestoneByTrack={this.state.milestoneByTrack}
       trackId={this.state.focusedTrackId}
-      handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+      handleTrackMilestoneChangeFn={this.handleTrackMilestoneChange} />
       </div>
       <div style={{flex: 2}}>
       
       <NightingaleChart
       milestoneByTrack={this.state.milestoneByTrack}
       focusedTrackId={this.state.focusedTrackId}
-      handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+      handleTrackMilestoneChangeFn={this.handleTrackMilestoneChange} />
       <div>
-       <button className="btn btn-default" onClick={this.handleClicExport.bind(this)}>Export to CSV</button>
-       <button className="btn btn-default" onClick={this.handleClickNew.bind(this)}>reset snowflake</button>
+       <button className="btn btn-default" onClick={this.handleClicExport}>Export to CSV</button>
+       <button className="btn btn-default" onClick={this.handleClickNew}>reset snowflake</button>
        <a ref={this.exportLinkRef} style={{display: 'none'}} aria-hidden="true" />
       </div>
       </div>
@@ -151,7 +151,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       <CareerProjector
       milestoneByTrack={this.state.milestoneByTrack}
       currentTitle={this.state.title}
-      setTitleFn={(title) => this.setTitle(title)} />
+      setTitleFn={this.setTitle} />
       </div>
       
       </div>
@@ -167,7 +167,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       )
     }
     
-    handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
+    handleTrackMilestoneChange = (trackId: TrackId, milestone: Milestone) => {
       const milestoneByTrack = this.state.milestoneByTrack
       milestoneByTrack[trackId] = milestone
       
@@ -177,28 +177,34 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
     }
     
-    shiftFocusedTrack(delta: number) {
+    shiftFocusedTrack = (delta: number) => {
       let index = trackIds.indexOf(this.state.focusedTrackId)
       index = (index + delta + trackIds.length) % trackIds.length
       const focusedTrackId = trackIds[index]
       this.setState({ focusedTrackId })
     }
+
+    selectNextTrack = () => this.shiftFocusedTrack(1)
+    selectPrevTrack = () => this.shiftFocusedTrack(-1)
     
-    setFocusedTrackId(trackId: TrackId) {
+    setFocusedTrackId = (trackId: TrackId) => {
       let index = trackIds.indexOf(trackId)
       const focusedTrackId = trackIds[index]
       this.setState({ focusedTrackId })
     }
     
-    shiftFocusedTrackMilestoneByDelta(delta: number) {
+    shiftFocusedTrackMilestoneByDelta = (delta: number) => {
       let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
       let milestone = prevMilestone + delta
       if (milestone < 0) milestone = 0
       if (milestone > 5) milestone = 5
       this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
     }
+
+    increaseFocusedMilestone = () => this.shiftFocusedTrackMilestoneByDelta(1)
+    decreaseFocusedMilestone = () => this.shiftFocusedTrackMilestoneByDelta(-1)
     
-    setTitle(title: string) {
+    setTitle = (title: string) => {
       let titles = eligibleTitles(this.state.milestoneByTrack)
       title = titles.indexOf(title) == -1 ? titles[0] : title
       this.setState({ title })

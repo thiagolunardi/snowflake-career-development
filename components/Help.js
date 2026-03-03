@@ -19,12 +19,12 @@ class Help extends React.Component {
     }
   }
 
-  hideModal() {
+  hideModal = () => {
     this.setState({showModal: false})
     window.localStorage.setItem('showHelpModal', 'false')
   }
 
-  showModal() {
+  showModal = () => {
     this.setState({showModal: true})
   }
 
@@ -33,7 +33,7 @@ class Help extends React.Component {
     return (
       <div style={{width: '50px', fill: 'grey'}}>
         <button
-          onClick={() => this.showModal()}
+          onClick={this.showModal}
           style={{
             display: 'block',
             width: '100%',
@@ -50,7 +50,7 @@ class Help extends React.Component {
         </svg>
         </button>
         {
-          this.state.showModal ? (<HelpModal hideModalFn={this.hideModal.bind(this)}/>) : null
+          this.state.showModal ? (<HelpModal hideModalFn={this.hideModal}/>) : null
         }
       </div>
     );
