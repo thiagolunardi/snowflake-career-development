@@ -2,9 +2,7 @@ import React from 'react'
 
 type Props = { hideModalFn: () => void }
 
-class HelpModal extends React.Component<Props> {
-  render() {
-
+function HelpModal({ hideModalFn }: Props) {
     return (
       <div>
         <style jsx>{`
@@ -22,7 +20,7 @@ class HelpModal extends React.Component<Props> {
         <div className="modalBackdrop" >
 
           <div style={{ margin: 'auto', background: 'white', border: 'purple', width:'500px', borderRadius: '13px', padding: '21px'}}>
-          <button onClick={() => this.props.hideModalFn()} style={{float: 'right', color: 'white', backgroundColor: 'purple'}} className="close-button" data-close aria-label="Close modal" type="button">
+          <button onClick={hideModalFn} style={{float: 'right', color: 'white', backgroundColor: 'purple'}} className="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
           </button>
 
@@ -50,7 +48,6 @@ class HelpModal extends React.Component<Props> {
         </div>
       </div>
     );
-  }
 }
 
 export default HelpModal;

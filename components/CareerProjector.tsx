@@ -8,9 +8,8 @@ type Props = {
   setTitleFn: (string) => void
 }
 
-class CareerProjector extends React.Component<Props> {
-  render() {
-    const titles = eligibleTitles(this.props.milestoneByTrack)
+function CareerProjector({ milestoneByTrack }: Props) {
+    const titles = eligibleTitles(milestoneByTrack)
     return (
       <div>
         <style jsx>{`
@@ -54,7 +53,6 @@ class CareerProjector extends React.Component<Props> {
         </div>
       </div>
     );
-  }
 }
 
 export default CareerProjector

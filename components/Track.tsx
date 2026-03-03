@@ -8,12 +8,11 @@ type Props = {
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 }
 
-class Track extends React.Component<Props> {
-  render() {
-    const track = tracks[this.props.trackId]
-    const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
-    const currentMilestone = track.milestones[currentMilestoneId - 1]
-    return (
+function Track({ milestoneByTrack, trackId, handleTrackMilestoneChangeFn }: Props) {
+  const track = tracks[trackId]
+  const currentMilestoneId = milestoneByTrack[trackId]
+  const currentMilestone = track.milestones[currentMilestoneId - 1]
+  return (
       <div className="track">
         <style jsx>{`
           div.track {
@@ -55,7 +54,7 @@ class Track extends React.Component<Props> {
                 const isMet = milestone <= currentMilestoneId
                 return (
                   <tr key={milestone}>
-                    <td onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
+                    <td onClick={() => handleTrackMilestoneChangeFn(trackId, milestone)}
                         style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
                       {milestone}
                     </td>
@@ -84,7 +83,6 @@ class Track extends React.Component<Props> {
         </div>
       </div>
     )
-  }
 }
 
 export default Track
