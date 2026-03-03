@@ -206,7 +206,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     
     setTitle = (title: string) => {
       let titles = eligibleTitles(this.state.milestoneByTrack)
-      title = titles.indexOf(title) == -1 ? titles[0] : title
+      title = titles.indexOf(title) === -1 ? titles[0] : title
       this.setState({ title })
     }
   }

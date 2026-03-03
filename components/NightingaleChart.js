@@ -65,12 +65,12 @@ class NightingaleChart extends React.Component<Props> {
         <svg>
           <g transform={`translate(${width/2},${width/2}) rotate(-33.75)`}>
             {trackIds.map((trackId, i) => {
-              const isCurrentTrack = trackId == this.props.focusedTrackId
+              const isCurrentTrack = trackId === this.props.focusedTrackId
               return (
                 <g key={trackId} transform={`rotate(${i * 360 / trackIds.length})`}>
                   {arcMilestones.map((milestone) => {
-                    const isCurrentMilestone = isCurrentTrack && milestone == currentMilestoneId
-                    const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone == 0
+                    const isCurrentMilestone = isCurrentTrack && milestone === currentMilestoneId
+                    const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone === 0
                     return (
                       <path
                           key={milestone}
