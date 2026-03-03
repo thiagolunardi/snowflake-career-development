@@ -11,8 +11,8 @@ type Props = {
 class Header extends React.PureComponent<Props> {
   render() {
     return (
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '10%', height: '100%'}}>
-      <div style={{width: 120, height: '100%'}}>
+      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '10%', height: '100px'}}>
+      <div style={{width: 120, height: '100%', display: 'flex', alignItems: 'center'}}>
         <div className="aui">
         <img width="200px" src="https://s101-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/181/710/original/paymenttools_Logo_Yellow_Purple_RGB.png?1721728389"/>
         </div>
