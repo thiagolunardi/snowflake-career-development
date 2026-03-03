@@ -14,7 +14,7 @@ class Header extends React.PureComponent<Props> {
       <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '10%', height: '100px'}}>
       <div style={{width: 120, height: '100%', display: 'flex', alignItems: 'center'}}>
         <div className="aui">
-        <img width="200px" src="https://s101-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/181/710/original/paymenttools_Logo_Yellow_Purple_RGB.png?1721728389"/>
+        <img width="200px" alt="Company logo" src="https://s101-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/181/710/original/paymenttools_Logo_Yellow_Purple_RGB.png?1721728389"/>
         </div>
       </div>
 
@@ -27,7 +27,7 @@ class Header extends React.PureComponent<Props> {
         justifyContent: 'center',
         }}>
           <span>
-            Enter Engineer's Name Here
+            Enter Engineer&apos;s Name Here
           </span>
         <input
           type="text"

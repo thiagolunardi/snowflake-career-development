@@ -21,8 +21,11 @@
     "@babel/preset-env": "^7.29.0",
     "@babel/preset-react": "^7.28.5",
     "babel-jest": "^30.2.0",
+    "eslint": "8",
+    "eslint-config-next": "14",
     "flow-bin": "^0.303.0",
-    "jest": "^30.2.0"
+    "jest": "^30.2.0",
+    "typescript": "^5.9.3"
   },
   "jest": {
     "transformIgnorePatterns": [
