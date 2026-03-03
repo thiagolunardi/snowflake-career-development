@@ -14,14 +14,22 @@ class Help extends React.Component {
   }
 
   componentDidMount() {
-    if (window.localStorage.getItem('showHelpModal') !== 'false') {
+    try {
+      if (window.localStorage.getItem('showHelpModal') !== 'false') {
         this.setState({showModal: true})
+      }
+    } catch (e) {
+      this.setState({showModal: true})
     }
   }
 
   hideModal = () => {
     this.setState({showModal: false})
-    window.localStorage.setItem('showHelpModal', 'false')
+    try {
+      window.localStorage.setItem('showHelpModal', 'false')
+    } catch (e) {
+      // storage unavailable, ignore
+    }
   }
 
   showModal = () => {

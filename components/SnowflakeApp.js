@@ -46,10 +46,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   
   handleClickNew = () => {
     window.location.href = '';
-    document.querySelector('.name-input').value = '';
   }
   
-  handleClicExport = () => {
+  handleClickExport = () => {
     const { milestoneByTrack, name } = this.state
 
     const headers = ['skillset projection', ...trackIds]
@@ -142,7 +141,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       focusedTrackId={this.state.focusedTrackId}
       handleTrackMilestoneChangeFn={this.handleTrackMilestoneChange} />
       <div>
-       <button className="btn btn-default" onClick={this.handleClicExport}>Export to CSV</button>
+       <button className="btn btn-default" onClick={this.handleClickExport}>Export to CSV</button>
        <button className="btn btn-default" onClick={this.handleClickNew}>reset snowflake</button>
        <a ref={this.exportLinkRef} style={{display: 'none'}} aria-hidden="true" />
       </div>

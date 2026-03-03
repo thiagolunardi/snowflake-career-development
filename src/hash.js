@@ -38,7 +38,7 @@ export const hashToState = (hash: String): ?SnowflakeAppState => {
     trackIds.forEach((trackId, i) => {
         result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]));
     });
-    if (hashValues[15]) result.name = decodeURI(hashValues[15]);
-    if (hashValues[16]) result.title = decodeURI(hashValues[16]);
+    if (hashValues[trackIds.length]) result.name = decodeURI(hashValues[trackIds.length]);
+    if (hashValues[trackIds.length + 1]) result.title = decodeURI(hashValues[trackIds.length + 1]);
     return result
 };
