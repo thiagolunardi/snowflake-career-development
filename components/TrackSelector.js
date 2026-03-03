@@ -16,7 +16,7 @@ class TrackSelector extends React.Component<Props> {
       <table>
         <style jsx>{`
           table {
-            width: 90%;
+            width: 100%;
             border-spacing: 3px;
             border-bottom: 2px solid #ccc;
             padding-bottom: 20px;
